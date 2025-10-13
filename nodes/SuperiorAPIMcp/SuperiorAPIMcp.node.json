@@ -1,0 +1,18 @@
+{
+   "node": "n8n-nodes-base.superiorAPIMcp",
+   "nodeVersion": "1.0",
+   "codexVersion": "1.0",
+   "categories": ["Development", "Communication"],
+   "resources": {
+       "credentialDocumentation": [
+           {
+               "url": "https://modelcontextprotocol.io/docs"
+           }
+       ],
+       "primaryDocumentation": [
+           {
+               "url": "https://modelcontextprotocol.io/docs"
+           }
+       ]
+   }
+}

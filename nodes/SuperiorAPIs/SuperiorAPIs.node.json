@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.superiorAPIs",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Communication"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://your-api-docs-url.com"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://your-api-docs-url.com"
+			}
+		]
+	}
+}
