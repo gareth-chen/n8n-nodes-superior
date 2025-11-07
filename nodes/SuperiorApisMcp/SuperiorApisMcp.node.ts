@@ -1,6 +1,3 @@
-/* eslint-disable n8n-nodes-base/node-filename-against-convention */
-/* eslint-disable n8n-nodes-base/node-param-options-type-unsorted-items */
-/* eslint-disable @typescript-eslint/no-var-requires */
 import {
 	IExecuteFunctions,
 	INodeExecutionData,
@@ -22,14 +19,14 @@ const { URL } = require('url');
  * 功能：與 Model Context Protocol (MCP) 服務器交互
  * 支援：SSE 和 HTTP 兩種傳輸方式
  */
-export class SuperiorAPIMcp implements INodeType {
+export class SuperiorApisMcp implements INodeType {
 	// ==================== Node 基本配置 ====================
 	description: INodeTypeDescription = {
 		// Node 顯示名稱
 		displayName: 'SuperiorAPIs (MCP)',
 
 		// Node 內部識別名稱
-		name: 'superiorApiMcp',
+		name: 'superiorApisMcp',
 
 		// Node 圖標
 		icon: 'file:superiorapis.svg',
@@ -110,34 +107,22 @@ export class SuperiorAPIMcp implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
-						name: 'Initialize',
-						value: 'initialize',
-						action: 'Initialize MCP connection',
-						description: 'Initialize MCP connection',
-					},
-					{
-						name: 'List Tools',
-						value: 'tools/list',
-						action: 'List available tools',
-						description: 'List available tools',
-					},
-					{
 						name: 'Call Tool',
 						value: 'tools/call',
 						action: 'Execute a tool',
 						description: 'Execute a tool',
 					},
 					{
-						name: 'List Resources',
-						value: 'resources/list',
-						action: 'List available resources',
-						description: 'List available resources',
+						name: 'Get Prompt',
+						value: 'prompts/get',
+						action: 'Get a prompt',
+						description: 'Get a prompt',
 					},
 					{
-						name: 'Read Resource',
-						value: 'resources/read',
-						action: 'Read a resource',
-						description: 'Read a resource',
+						name: 'Initialize',
+						value: 'initialize',
+						action: 'Initialize MCP connection',
+						description: 'Initialize MCP connection',
 					},
 					{
 						name: 'List Prompts',
@@ -146,10 +131,22 @@ export class SuperiorAPIMcp implements INodeType {
 						description: 'List available prompts',
 					},
 					{
-						name: 'Get Prompt',
-						value: 'prompts/get',
-						action: 'Get a prompt',
-						description: 'Get a prompt',
+						name: 'List Resources',
+						value: 'resources/list',
+						action: 'List available resources',
+						description: 'List available resources',
+					},
+					{
+						name: 'List Tools',
+						value: 'tools/list',
+						action: 'List available tools',
+						description: 'List available tools',
+					},
+					{
+						name: 'Read Resource',
+						value: 'resources/read',
+						action: 'Read a resource',
+						description: 'Read a resource',
 					},
 				],
 				default: 'tools/list',

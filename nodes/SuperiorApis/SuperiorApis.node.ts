@@ -1,5 +1,3 @@
-/* eslint-disable n8n-nodes-base/node-filename-against-convention */
-/* eslint-disable n8n-nodes-base/node-param-options-type-unsorted-items */
 import {
 	IExecuteFunctions,
 	INodeExecutionData,
@@ -21,7 +19,7 @@ import {
  *
  * 功能:從 SuperiorAPIs 平台選擇並調用 API
  */
-export class SuperiorAPIs implements INodeType {
+export class SuperiorApis implements INodeType {
 	// 快取輔助方法 - 取得並快取 plugin 列表
 	private async getPluginListCached(context: ILoadOptionsFunctions, token: string): Promise<any> {
 		const workflowStaticData = context.getWorkflowStaticData('node');
@@ -58,10 +56,10 @@ export class SuperiorAPIs implements INodeType {
 		displayName: 'SuperiorAPIs',
 
 		// Node 內部識別名稱（程式碼中使用）
-		name: 'superiorApIs',
+		name: 'superiorApis',
 
 		// Node 圖標（使用本地 SVG 文件）
-		icon: 'file:superior.svg',
+		icon: 'file:superiorapis.svg',
 
 		// Node 分類（在 n8n 界面中的分類位置）
 		group: ['transform'],
@@ -501,7 +499,7 @@ export class SuperiorAPIs implements INodeType {
 
 				try {
 					// 使用快取方法
-					const superiorAPIsNode = new SuperiorAPIs();
+					const superiorAPIsNode = new SuperiorApis();
 					const response = await superiorAPIsNode['getPluginListCached'](this, token);
 
 					if (!response.plugins || !Array.isArray(response.plugins)) {

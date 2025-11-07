@@ -38,8 +38,8 @@
 			"dist/credentials/SuperiorAPIHttpApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/SuperiorAPIs/SuperiorAPIs.node.js",
-			"dist/nodes/SuperiorAPIMcp/SuperiorAPIMcp.node.js"
+			"dist/nodes/SuperiorApis/SuperiorApis.node.js",
+			"dist/nodes/SuperiorApisMcp/SuperiorApisMcp.node.js"
 		]
 	},
 	"devDependencies": {
